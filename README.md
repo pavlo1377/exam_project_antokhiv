@@ -49,9 +49,59 @@ The project is structured into two main directories:
 - **Information**:
   - `GET /info`: Provides information about the website and contact details.
 
-## Setup and Installation
+Apologies for the incomplete response! Here's the full section for cloning the repository and setting up the project:
+
+```markdown
+## Setup Instructions
 
 1. **Clone the Repository**:
+   To get started with the project, clone the repository to your local machine:
    ```bash
    git clone https://github.com/yourusername/your-repository-name.git
    cd your-repository-name
+   ```
+
+2. **Install Dependencies**:
+   Navigate to both the `frontend` and `backend` directories and install the required dependencies.
+
+   For the frontend:
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+   For the backend:
+   ```bash
+   cd ../backend
+   npm install
+   ```
+
+3. **Set Up the Database**:
+   - Ensure that PostgreSQL is installed and running on your machine.
+   - Create a new database and tables as per the project’s requirements.
+   - You can manage the database directly using pgAdmin or a PostgreSQL client.
+
+4. **Run the Backend**:
+   Start the backend server by running:
+   ```bash
+   cd ../backend
+   npm run dev
+   ```
+   This will start the server, and the API will be available for the frontend to interact with.
+
+5. **Run the Frontend**:
+   In a new terminal window, navigate to the `frontend` directory and start the React application:
+   ```bash
+   cd ../frontend
+   npm run dev
+   ```
+
+6. **Access the Application**:
+   Once both the backend and frontend servers are running, you can access the application in your browser at:
+   ```
+   http://localhost:5174 (for the client)
+   http://localhost:8081 (for the server)_ 
+   ```
+
+
+This section covers the basic setup instructions for cloning the repository, installing dependencies, setting up the database, and running both the frontend and backend.
