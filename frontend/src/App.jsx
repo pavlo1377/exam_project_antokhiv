@@ -10,9 +10,15 @@ import SchedulePage from "./pages/Schedule/SchedulePage";
 import InfoPage from "./pages/Info/InfoPage";
 import NotFoundPage from "./pages/NotFound/NotFoundPage";
 import AppLayout from "./ui/AppLayout";
+import AdminPanel from "./pages/admin/AdminPanel";
+
 
 function App() {
-  const { isAuthenticated } = useSelector((state) => state.auth);
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
+  const adminEmail = 'antokhiv.pavlo@gmail.com'
+
+  console.log('isAuthenticated:', isAuthenticated);  // Логуємо, чи користувач авторизований
+  console.log('userEmail:', user.email);  // Логуємо email користувача
 
   const router = createBrowserRouter([
     {
@@ -37,6 +43,10 @@ function App() {
       path: "/auth/signup",
       element: <SignUpPage />, 
     },
+    {
+      path: "admin/schedule/:year",
+      element: isAuthenticated && user.email === adminEmail ? <AdminPanel/> : <Navigate to='/'/>
+    }
   ]);
 
   return <RouterProvider router={router} />;

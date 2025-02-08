@@ -1,12 +1,12 @@
 export async function fetchScheduleData(year) {
   try {
     const response = await fetch(`http://localhost:8081/schedule/${year}`);
-    console.log("Response:", response);
+    // console.log("Response:", response);
     if (!response.ok) {
       throw new Error("Failed to fetch schedule data");
     }
     const result = await response.json();
-    console.log("Result:", result);
+    // console.log("Result:", result);
     return result;
   } catch (err) {
     console.error("Error fetching schedule data", err);

@@ -18,7 +18,7 @@ const HomePage = () => {
       >
         Get Started
       </button>
-
+      
       <div className="mt-12 flex flex-wrap justify-center gap-8 w-full max-w-5xl">
         <div className="flex-1 min-w-[280px] max-w-sm bg-white text-blue-900 p-6 rounded-lg shadow-lg text-center">
           <h2 className="text-2xl font-bold mb-2">Quick Access</h2>
@@ -33,7 +33,6 @@ const HomePage = () => {
           <p>Keep all of your classes neatly arranged.</p>
         </div>
       </div>
-
       <footer className="mt-12 text-center text-sm">
         <p>Join 100+ students already using University Scheduler!</p>
       </footer>

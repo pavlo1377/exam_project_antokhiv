@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import logo_2 from "../../public/logo_2.png";
 import { useSelector } from "react-redux";
 
@@ -7,6 +7,7 @@ const Header = () => {
   const { user } = useSelector((state) => state.auth);
 
   const location = useLocation();
+  const userIsAdmin = user.email === 'antokhiv.pavlo@gmail.com';
 
   const isHomePage = location.pathname === "/";
 
@@ -22,6 +23,7 @@ const Header = () => {
 
         {/* Навігація */}
         <nav className="space-x-4 justify-between">
+          {userIsAdmin ? <Link to="/admin/schedule/firstYear" className="text-lg hover:text-gray-400">Admin Panel</Link> : ""}
           <Link
             to="/schedule/firstYear"
             className="text-lg hover:text-gray-400"

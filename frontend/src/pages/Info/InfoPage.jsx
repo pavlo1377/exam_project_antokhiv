@@ -6,7 +6,7 @@ function InfoPage() {
         Welcome to our scheduling app! This platform helps you manage your classes efficiently and stay organized.
       </p>
 
-      <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-4xl mx-auto">
+      <div className="flex md:flex-row justify-center items-center gap-8 max-w-6xl mx-auto">
         <div className="flex-1 bg-white text-blue-900 p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-2">Our Mission</h2>
           <p>

@@ -30,7 +30,7 @@ const scheduleSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchSchedule.fulfilled, (state, action) => {
-        console.log("Payload:", action.payload)
+        // console.log("Payload:", action.payload)
         state.isLoading = false;
         if (action.payload && action.payload.data && action.payload.year) {
           state.data[action.payload.year] = action.payload.data;

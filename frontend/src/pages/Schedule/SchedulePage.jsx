@@ -7,7 +7,7 @@ import NotFound from "../NotFound/NotFoundPage";
 
 function Schedule() {
   const { data, isLoading, error } = useSelector((state) => state.schedule);
-  console.log("Redux state data:", data);
+  // console.log("Redux state data:", data);
 
   const { year } = useParams();
 
@@ -91,9 +91,7 @@ function Schedule() {
             {scheduleMatrix.map((row, rowIndex) => (
               <tr
                 key={rowIndex}
-                className={`${
-                  rowIndex % 2 === 0 ? "bg-blue-50" : "bg-blue-100"
-                } hover:bg-gray-100`}
+                className=" bg-blue-50 hover:bg-blue-100"
               >
                 <td className="border px-6 py-4 font-semibold text-gray-900 text-xl">
                   {hours[rowIndex]}
