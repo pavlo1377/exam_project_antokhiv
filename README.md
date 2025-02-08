@@ -13,8 +13,15 @@ This web application provides students with an intuitive interface to access and
 - **Class Schedule Display**:
   - Users can view class schedules for all three years of the bachelor's program. Data is dynamically loaded from the database through API calls, ensuring accuracy and up-to-date information.
 
+- **Admin Panel**:
+  - Administrators have access to a dedicated panel for managing class schedules.
+  - **CRUD operations**: Admins can create, update, and delete schedule entries.
+  - **Year Selection**: The interface allows switching between different years of study.
+  - **Access Restriction**: This functionality is only available for authenticated administrators.
+
 - **University Links**:
   - Active links to the university's social media profiles and the official website are available in the footer of the website for easy access.
+
 
 ## Architecture
 
